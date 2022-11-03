@@ -1,5 +1,5 @@
-port: 10808
-socks-port: 10809
+port: 7890
+socks-port: 8889
 allow-lan: true
 mode: Rule
 log-level: info
@@ -20,7 +20,13 @@ dns:
     geoip: true                  # default    
     ipcidr:                      # ips in these subnets will be considered polluted
       - 240.0.0.0/4
-      
+   
+   proxies:
+  - name: "trojan"
+    type: trojan
+    server: leecheungv2ray.top
+    port: 443
+    password: 100200
 # interval代表间隔时间，单位为s
 # tolerance代表容差时间，单位为ms
 # 由于分流规则引用了Github文件，如果你的本地网络无法访问Github，你将无法让Clash正常工作。
