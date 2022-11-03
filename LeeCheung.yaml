@@ -25,7 +25,7 @@ dns:
   - name: "trojan"
   type: trojan
   server: leecheungv2ray.top
-  port: 443
+  port: 114
   password: 100200
   # udp: true
   # sni: example.com # 填写伪装域名
