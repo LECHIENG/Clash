@@ -23,10 +23,16 @@ dns:
    
    proxies:
   - name: "trojan"
-    type: trojan
-    server: leecheungv2ray.top
-    port: 443
-    password: 100200
+  type: trojan
+  server: leecheungv2ray.top
+  port: 443
+  password: 100200
+  # udp: true
+  # sni: example.com # 填写伪装域名
+  alpn:
+     - h2
+     - http/1.1
+  # skip-cert-verify: true
 # interval代表间隔时间，单位为s
 # tolerance代表容差时间，单位为ms
 # 由于分流规则引用了Github文件，如果你的本地网络无法访问Github，你将无法让Clash正常工作。
